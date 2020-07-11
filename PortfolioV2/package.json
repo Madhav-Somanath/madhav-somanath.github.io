@@ -5,16 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cobidev/simplefolio"
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Madhav Somanath",
   "license": "ISC",
-  "homepage": "https://github.com/Madhav-Somanath/",
+  "homepage": "https://madhav-somanath.github.io/PortfolioV2/",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
