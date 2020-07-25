@@ -4,9 +4,9 @@
   "description": "Design-minded front-end software engineer focused on building beautiful interfaces and experiences",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Madhav-Somanath/madhav-somanath.github.io/blob/master/Portfolio/"
+    "url": "https://github.com/Madhav-Somanath/madhav-somanath.github.io/"
   },
-  "homepage": "https://github.com/Madhav-Somanath/madhav-somanath.github.io/blob/master/Portfolio/",
+  "homepage": "https://github.com/Madhav-Somanath/madhav-somanath.github.io/",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp serve --watch",
