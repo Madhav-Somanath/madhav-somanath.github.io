@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../fav.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Events</title>
+    <meta name="msapplication-config" content="images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+<style>
+
+#loader{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #030321;
+    font-family: Arial;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    font-weight: 800;
+    }
+  html, body{
+    overflow-y:hidden !important;
+    height: 100%;
+    
+  }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #3cfedb;
+            touch-action: none
+        }
+
+        #white-loader {
+            filter: invert(1);
+            z-index: 2;
+            background: 0 0;
+            display: none;
+            touch-action: auto
+        }
+
+        @media (max-width:600px) {
+            .se-pre-con {
+                transform: scale(2)
+            }
+        }
+
+        .uppercase,
+        .uppercase * {
+            text-transform: uppercase
+        }
+
+        .no-uppercase {
+            text-transform: initial
+        }
+    </style><noscript>
+        <style>
+            #mi-main-sidebar,
+            .se-pre-con {
+                display: none
+            }
+        </style>
+    </noscript>
+</head>
+<script>
+        window.onload = function(){ document.getElementById("loader").style.display = "none"; }
+        </script>
+<body>
+    <!-- <div id="white-loader"></div> -->
+    <div id="loader">
+            <svg viewBox="0 0 1200 300">
+                <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">Aagneya '20</text>
+                </symbol>
+            
+                <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg>
+            </div>
+    <div id="lottie" ></div>
+    <script src="scriptee0d.js?t=1558912575577"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,900">
+    <link rel="stylesheet" href="assets/fontello/css/moodi-iconsee0d.css?t=1558912575577">
+    <link rel="stylesheet" href="stylesee0d.css?t=1558912575577">
+   
+    <a class="logo-main"
+        href="index.html"><img src="../finallogo.png" alt="Logo"></a>
+ 
+    <div class="mi-top-right-buttons need-invert" style="font-size: 1.05em; right:50px;">
+        <a href="../index.html"><img src="images/close-button.svg" alt="Close" style="width: 1.6rem;"></a>
+    </div>
+    
+   
+    <div id="barba-wrapper">
+        <div class="barba-container">
+            <style>
+                .maindiv {
+                    color: #fff;
+                    background: linear-gradient(50deg, #061161, #780206)
+                }
+
+                #round {
+                    border-radius: 50%
+                }
+
+                .evt-siema {
+                    height: 100%
+                }
+
+                .mi-siema-container {
+                    width: 100vw;
+                    height: 100vh;
+                    position: relative;
+                    overflow: hidden
+                }
+
+                .mi-evt-title {
+                    font-size: 5em;
+                    font-family: Lato;
+                    font-weight: 900;
+                    margin-bottom: .7em
+                }
+
+                .mi-evt-link {
+                    text-decoration: none !important;
+                    color: #fff;
+                    font-weight: 900
+                }
+
+                .mi-evt-left {
+                    position: absolute;
+                    right: 50%;
+                    width: 35%;
+                    top: 20%;
+                    z-index: 1
+                }
+
+                .mi-evt-right {
+                    position: absolute;
+                    left: 50%;
+                    width: 40%;
+                    top: 20%;
+                    height: 80%
+                }
+
+                .mi-evt-left-content {
+                    font-family: Lato;
+                    font-size: 1.1em;
+                    line-height: 1.2em
+                }
+
+                .mi-evt-right-img {
+                    z-index: -2;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform: translateX(-0%)
+                }
+
+                .mi-evt-num-template.active {
+                    background-color: #fff;
+                    color: #ff0e48
+                }
+
+                .exp-img-container {
+                    height: 60vh;
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    text-align: center
+                }
+
+                .sb-cont h2 {
+                    font-size: 2em;
+                    font-weight: 900;
+                    display: inline
+                }
+
+                .sb-cont h3 {
+                    font-size: 1.3em;
+                    font-weight: 900
+                }
+
+                .mi-evt-right-content {
+                    position: absolute;
+                    right: 0;
+                    width: 90%;
+                    height: 60vh;
+                    overflow-x: hidden;
+                    font-size: 1.1em;
+                    line-height: 1.2em
+                }
+
+                .mi-evt-right-content p {
+                    margin-top: .3em;
+                    margin-bottom: 1em;
+                    margin-right: .4em
+                }
+
+                .button-right {
+                    padding: 5px;
+                    border: 2px solid #fff;
+                    border-radius: 25px;
+                    width: 50%;
+                    text-align: center;
+                    margin-top: 5px;
+                    cursor: pointer
+                }
+
+                .mi-evt-img {
+                    width: 65%;
+                    margin-right: auto;
+                    display: block;
+                    margin-top: 10px
+                }
+
+                @media (max-width:1200px) {
+                    .mi-evt-title {
+                        font-size: 3.8em
+                    }
+                }
+
+                @media (max-width:600px) {
+                    .mi-evt-title {
+                        font-size: 2.7em
+                    }
+
+                    .sb-cont h2 {
+                        font-size: 1.6em
+                    }
+
+                    .sb-cont h3 {
+                        line-height: 1.1em
+                    }
+
+                    .mi-evt-left {
+                        font-size: .85em;
+                        left: 4%;
+                        width: 80%;
+                        top: 7vh;
+                        padding: 20px;
+                        padding-top: 5px;
+                        height: calc(90vh - 70px);
+                        overflow-y: scroll;
+                        overflow-x: hidden
+                    }
+
+                    .mi-evt-right {
+                        position: absolute;
+                        left: 10%;
+                        width: 90%;
+                        top: 10%;
+                        height: 90%
+                    }
+
+                    .mi-evt-right-content {
+                        margin-top: 2em;
+                        font-size: 1em;
+                        position: relative;
+                        right: unset;
+                        height: auto;
+                        width: auto
+                    }
+
+                    .mi-evt-right-content p {
+                        margin-right: 0
+                    }
+                }
+            </style>
+
+            <div id="evt-siema-next" class="siema-next"><img src="images/arrow_right.svg" alt="Next"></div>
+            <div id="evt-siema-prev" class="siema-prev"><img src="images/arrow_right.svg" alt="Back"></div>
+            <div class="full-body maindiv">
+                <div class="evt-siema">
+                        
+                            <div ga-event="concerts">
+                                    <div class="mi-siema-container">
+                                        <div class="mi-evt-left">
+                                            <h1 class="mi-evt-title uppercase">Technical Events</h1>
+                                            <p class="mi-evt-left-content">‌Welcome to the collection of Technical Events conducted by Government Engineering College, Barton Hill for our Techno-Cultural Fest AAGENYA!</p>
+                                        </div>
+                                        <div class="mi-evt-right">
+                                            <div data-simplebar class="mi-evt-right-content t-concerts">
+                                                <div class="sb-cont">
+                                                    <p></p>
+                                                    <h2 class="uppercase">Events</h2>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>CIRCUIT RACE</h3>Prizes worth 10,000/-<br><br>Circuiteers out there! Are you ready for some electrical moments? Well, Department of Electrical & Electronics Engineering of Government Engineering College Barton Hill under AAGNEYA '20 presents to you CIRCUIT RACE ! Designing our circuit is no easy game. If your brain can resist the pressure and yet think quickly, 
+                                                    you can make it to the top. Shock us with your skill and team spirit. Remember, accuracy with the speed is the yardstick! Join this quest, to be the best!<br><br>                                                  
+                                                  <div class="button-right t-button" data-open="EDM" nite data-close="concerts">View Rules and Register</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>SOLDERING MASTER</h3>Prizes Worth 5,000/-<br><br>LED blink is what people think makes makers happy. But they are wrong. Makers want to be miserable. They like to make mistakes and to have to try things over and over again. Department of Electrical and Electronics Engineering of Government Engineering College Barton Hill under AAGNEYA '20 presents 
+                                                    "SOLDERING MASTER" - Lead the way to an epic circuitry.<br><br>                                               
+                                                    <div class="button-right t-button" data-open="Livewire" nite
+                                                        data-close="concerts">View Rules and Register</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>PARADIGM</h3>Prizes worth 12,000/-<br><br>Ever had the keenest eye for details?  Ever wished to challenge yourself in the game of drafts? Ever sought out to perfect a plan for the most perplexing of problems? If yes, are you looking for the perfect stage to prove your worth? The wait is over, 'cause the Department of Civil Engineering of  Government Engineering College, Barton Hill, under AAGNEYA '20, presents, PARADIGM - The daredevil's dilemma<br><br>
+                                                    <div class="button-right t-button" data-open="Fusion" nite data-close="concerts">View Rules and Register</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>PLAN B</h3>Prizes worth 10,000/-<br>Are you good at explaining structures with the help of models ? Are you curious as to the why's nd How's of all the wonderful creations around you? Then here the Department of Civil Engineering of GEC Barton Hill under AAGNEYA ‘20 presents before you the right platform. 
+                                                    PLAN B - Plan Better Build Better.<br><br>
+                                                    <div class="button-right t-button" data-open="Popular" nite
+                                                        data-close="concerts">View Rules and Register</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>MARCO POLO</h3>Prizes worth 12,000/-<br><br>If you are a person who loves solving riddles, if the word “adventure” makes adrenaline rush through your body, if you want to explore the campus along with tweaking your ratiocinative mind on electronics, then your wait is over. The Department of Electronics and Communication Engineering  of GEC Barton Hill, under AAGNEYA’ 20 , presents before you, 
+                                                    Marco Polo - A Quest towards Electronic Finesse<br><br><div class="button-right t-button" data-open="Popular1" nite data-close="concerts">View Rules and Register</div> 
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>SYNCODE</h3>Prizes worth 15,000/-<br><br>You think your coding game is up there? Then try this! To win this event, all you need to do is solve a few programs and stay in sync. Sounds simple? But wait, after every blow of the buzzer you and your team-mate have to switch places. Department of Information Technology of Government Engineering College Barton Hill under AAGNEYA '20 presents "SynCode" - a competition for all you coders out there!
+                                                    <br><br><div class="button-right t-button" data-open="Popular2" nite data-close="concerts">View Rules and Register</div> 
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>DEFUSE</h3>Prizes worth 15,000/-<br><br>Hello fellow Coders. Ever wondered where you'd rank against the best? Want a platform to show off your hard earned skills? Aching for a challenge?
+                                                    To win, you just have to code. But wait, there is a catch, there is a bomb waiting to explode! Don't let the timer run out!
+                                                    Come together, prove yourself at AAGNEYA '20. 
+                                                    Defuse the bomb, win the prize!
+                                                    <br><br><div class="button-right t-button" data-open="Popular3" nite data-close="concerts">View Rules and Register</div> 
+                                                    <p></p>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                <div class="sb-cont">
+                                                    <p></p>
+                                                    <h2 class="uppercase">Circuit Racer</h2>
+                                                    <div class="button-right t-button" data-open="concerts" data-close="EDM" nite>
+                                                        &#8249; Go Back</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>Guidelines</h3>
+                                                    <p>> Team can consist of minimum two and maximum of three members.
+                                                        <br><br>>  Contestants are required to bring a valid  ID card with you.
+                                                        <br><br>> Event consists of 2 rounds.
+                                                        <br><br>Round 1 : Written prelims to test your general electrical engineering knowledge, reasoning and logical skill in 45  minutes.
+                                                        <br><br>Round 2 : Assemble the given circuit as fast as possible with available hints and components.
+                                                        The team can ask for  another circuit , if they have  completed the first one before the scheduled.
+                                                        <br><br>> Final round evaluation is based on efficiency, speed and neatness of the circuit.
+                                                        <br><br>> The final ranking will be based on cumulative performance in 2 rounds of event.
+                                                        <br><br>> Decisions made by the judging panel will be final.
+                                                        <br><br>Registration fee : ₹100 per head.
+                                                        <br>Date : 13 March 2020
+                                                        <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                        <br><br>>For more details, Contact:
+                                                        <br> Rahul : 8111875616
+                                                        <br> Sooryadas : 9567177239
+                                                        <br><br><a href="https://forms.gle/yhykMxoJKNjRfdaNA">REGISTER HERE</a>
+                                                        <br><br>
+                                                    </p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div data-simplebar class="mi-evt-right-content t-Livewire Nite" style="display:none">
+                                                <div class="sb-cont">
+                                                    <p></p>
+                                                    <h2 class="uppercase">Soldering Master</h2>
+                                                    <div class="button-right t-button" data-open="concerts" data-close="Livewire"
+                                                        nite>&#8249; Go Back</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>Guidelines</h3>
+                                                    <p>> Individual participation is preferred.
+                                                        <br><br>>  Contestants should bring a valid identity card if their respective institution.
+                                                        <br><br>> Competition consists of 3 rounds.
+                                                        <br><br>Round 1 : Pen Paper Test.
+                                                        <br><br>Round 2 : Desoldering Round using solder wick.
+                                                        <br><br>Round 3 : Soldering Round.
+                                                        <br><br>> Participants will be selected to the next levels based on their performance in each round.
+                                                        <br><br>> Neatness and accuracy of the Soldering done is not only the prime winning factor, the accuracy of the output obtained also matters.
+                                                        <br><br>> Defect in any component should be reported during the first 15 mins of cool break of each round.
+                                                        <br><br>> All the components needed will be provided.
+                                                        <br><br>> Use of any other tool or method other than what is provided and asked is unfair and leads to disqualification.
+                                                        <br><br>> Decisions made by the judging panel is final.
+                                                        <br><br>Registration fee : ₹50 per head.
+                                                        <br>Date : 13 March 2020
+                                                        <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                        <br><br>>For more details, Contact:
+                                                        <br> Sarath Menon : 9496702629
+                                                        <br> Ajay P S : 6238276263
+                                                        <br><br><a href="https://forms.gle/jXKPEwQKdv8Sxkua6">REGISTER HERE</a>
+                                                        <br><br>
+                                                        </p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div data-simplebar class="mi-evt-right-content t-Fusion Nite" style="display:none">
+                                                <div class="sb-cont">
+                                                    <p></p>
+                                                    <h2 class="uppercase">Paradigm</h2>
+                                                    <div class="button-right t-button" data-open="concerts" data-close="Fusion"
+                                                        nite>&#8249; Go Back</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>Guidelines</h3>
+                                                    <p>> A team can consist of maximum 4 and minimum 3 members.
+                                                        <br><br>>  Contestants should bring a valid identity card if their respective institution.
+                                                        <br><br>> Competition consists of 3 rounds.
+                                                        <br><br>Round 1 : Prelims - General aptitude test based on basic engineering concepts. 
+                                                        <br><br>Round 2 : Design and planning based round.
+                                                        <br><br>Round 3 : Software based task.
+                                                        <br><br>> Decision of coordinators will be final.
+                                                        <br><br>> Participants will be fully responsible for the equipment and machinery provided.
+                                                        <br><br>Registration fee : ₹100 per head.
+                                                        <br>Date : 13 March 2020
+                                                        <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                        <br><br>>For more details, Contact:
+                                                        <br> Millena : 8547243689
+                                                        <br> Abhirami : 7907734641
+                                                        <br><br><a href="https://forms.gle/quXcE5e5xfAXRBtQ8">REGISTER HERE</a>
+                                                        <br><br>
+                                                        </p>
+                                                </div>
+                                            </div>
+                                            <div data-simplebar class="mi-evt-right-content t-Popular Nite" style="display:none">
+                                                <div class="sb-cont">
+                                                    <p></p>
+                                                    <h2 class="uppercase">Plan B</h2>
+                                                    <div class="button-right t-button" data-open="concerts" data-close="Popular"
+                                                        nite>&#8249; Go Back</div>
+                                                    <p></p>
+                                                    <p class="mi-gen-right-para"></p>
+                                                    <h3>Guidelines
+                                                    </h3>
+                                                        <p>> Each team can have 2-4 members.
+                                                            <br><br>>  Items for all rounds will be provided.
+                                                            <br><br>> Participants need to produce valid ID cards of their respective institutes.
+                                                            <br><br>> The event consists of three rounds:
+                                                            <br><br>Round 1 : General prelims (written)
+                                                            <br><br>Round 2 : Model making
+                                                            <br><br>Round 3 : Finals
+                                                            <br><br>> Decisions made by the coordinators will be final.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 13 March 2020
+                                                            <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Gowri : 7356398359
+                                                            <br> Akshara : 8113860465
+                                                            <br><br><a href="https://forms.gle/ohLYfQoRoVvpRdaJ9">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div data-simplebar class="mi-evt-right-content t-Popular1 Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase1">Marco Polo</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="Popular1"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines
+                                                        </h3>
+                                                            <p>> Each team must have 3 members.
+                                                                <br><br>>  Cross college teams are allowed.
+                                                                <br><br>> Participants need to produce valid ID cards of their respective institutes.
+                                                                <br><br>> If any component is found to be defective, it should be reported during the first 15 minutes of the final round.
+                                                                <br><br>Round 1 : This round will be a written test based on arithmetic & logical reasoning and the basics of electronics.
+                                                                <br><br>Round 2 : Participants will have to solve the clues to reach locations where certain electronic components are hidden. 
+                                                                <br>Components collected by the participants should be used for completing the task in the next level.
+                                                                <br><br>Round 3 : A function generator and CRO will be provided for each team inorder to reproduce a function or a said shape in the CRO using the collected components.
+                                                                <br><br>> Decisions made by the coordinators will be final.
+                                                                <br><br>Registration fee : ₹100 per head.
+                                                                <br>Date : 13 March 2020
+                                                                <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                                <br><br>>For more details, Contact:
+                                                                <br> Abhirami P : 8921465694
+                                                                <br> Abhijith S S : 9074183828
+                                                                <br><br><a href="https://forms.gle/M8zmoYpA6apFewhX9">REGISTER HERE</a>
+                                                                <br><br>
+                                                              </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div data-simplebar class="mi-evt-right-content t-Popular2 Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase1">Syncode</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="Popular2"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines
+                                                        </h3>
+                                                            <p>> Each team must have 2 members.
+                                                                <br><br>> Participants need to produce valid ID cards of their respective institutes.
+                                                                <br><br>> Event consist of two rounds:
+                                                                <br><br>Round 1 : written round which will access your coding knowledge and skill.
+                                                                <br><br>Round 2 : Each member will be provided with three independent questions which they must code.In intervals they will be switched.
+                                                                <br><br>> Finals will be judged based on efficiency of team and speed.
+                                                                <br><br>> Decisions made by the coordinators will be final.
+                                                                <br><br>Registration fee : ₹100 per head.
+                                                                <br>Date : 13 March 2020
+                                                                <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                                <br><br>>For more details, Contact:
+                                                                <br> Abirami : 8304802675
+                                                                <br> Pournami : 8921312790
+                                                                <br><br><a href="https://forms.gle/iKsTEcNuyiXheHcs5">REGISTER HERE</a>
+                                                                <br><br>
+                                                              </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+
+                                                <div data-simplebar class="mi-evt-right-content t-Popular3 Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase1">Defuse</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="Popular3"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines
+                                                        </h3>
+                                                            <p>> Individual Participation.
+                                                                <br><br>>  You will be given a series of questions, each one appearing after you answer the previous one.
+                                                                <br><br>> Participants need to produce valid ID cards of their respective institutes.
+                                                                <br><br>> The answer to every question will be an alphanumeric pattern that you should find out using your program. Figure out the code to solve the question.
+                                                                <br><br>> Solve the maximum number of questions before the timer runs out. 
+                                                                <br><br>> Use any language you like, all we need are the right answers.
+                                                                <br><br>> We'll provide compilers for Java, C, C++ and Python. If you are going to use any other language, you may bring your own laptop.
+                                                                <br><br>> Decisions made by the coordinators will be final.
+                                                                <br><br>Registration fee : ₹100 per head.
+                                                                <br>Date : 13 March 2020
+                                                                <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                                <br><br>>For more details, Contact:
+                                                                <br> Karun : 9744182200
+                                                                <br> Akshay : 8075319033
+                                                                <br><br><a href="https://forms.gle/poP7xaA6sffC1UKY7">REGISTER HERE</a>
+                                                                <br><br>
+                                                              </p>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>`
+                                </div>
+                                <div ga-event="concerts">
+                                        <div class="mi-siema-container">
+                                            <div class="mi-evt-left">
+                                                <h1 class="mi-evt-title uppercase">Cultural Events</h1>
+                                                <p class="mi-evt-left-content">Welcome to the collection of Cultural Events conducted by Government Engineering College, Barton Hill for our Techno-Cultural Fest AAGENYA!</p>
+                                            </div>
+                                            <div class="mi-evt-right">
+                                                <div data-simplebar class="mi-evt-right-content t-concerts">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Events</h2>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>UNPLUGGED</h3> Prizes worth 10,000/-<br><br>An astounding platform to unveil the virtuoso in you and to embellish the floor with your stupendous talent in weaving music out of those flawless lyrics.
+                                                        Welcoming all the musical ensembles and music lovers to engrave the stage with mesmerizing rhythms.<br><br>
+                                                      <div class="button-right t-button" data-open="EDM" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>ENGLISH JAM</h3> Prizes worth 5,000/-<br><br>Aagneya '20 presents English Jam, the platform you were waiting for to stage your opinions. This is not just a competition, it's a chance for you to prove your zeal and how strong you can hold your case. 
+                                                        So don't let go of this opportunity 'coz the past cannot be changed but the future is still in your power. Aagneya'20 welcomes you.<br><br>
+                                                        <div class="button-right t-button" data-open="Livewire" nite
+                                                            data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>AALAP</h3>Prizes worth 8,000/-<br><br>Music is the greatest communication in the world. 
+                                                        Are you ready to be that "MAGICAL VOCALIST"
+                                                        who can cast a euphoric spell on the ‍audience to be on Cloud Nine!!
+                                                        May Aagneya be the platform for you to spread your wings and soar endlessly into the world of music.
+                                                        What are you waiting for?
+                                                        Roll up your sleeves and be a part of Aagneya's most anticipated event.<br><br>
+                                                        <div class="button-right t-button" data-open="Fusion" nite data-close="concerts">View Rules and Register</div>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>BATTLE OF BANDS</h3> Prizes worth 20,000/-<br><br>
+                                                        When the inner music takes over, will you be a scintillating gentleman or a groundshaking barbarian? 
+                                                        Let the music change you and make you new.
+                                                        Government Engineering College, Barton Hill invites you to participate in <strong>Dhaivat</strong> at Aagneya 2020.                                                        
+                                                        <br><br>
+                                                      <div class="button-right t-button" data-open="EDM2" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>ENGLISH DEBATE</h3> Prizes worth 5,000/-<br><br>Think you have what it takes to take down your opponents in the battle of words?  
+                                                        Well Aagneya'20 presents ENGLISH DEBATE, the perfect arena for you to show off those debating skills.  Team up and register now to compete amongst the best.                                                        
+                                                        <br><br>
+                                                      <div class="button-right t-button" data-open="EDM3" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>SPOT DUBBING</h3> Prizes worth 8,000/-<br><br>Presence of mind and an extraordinary skill set is what is needed for spot dubbing. Being able to dumbfound your audience through entertainment is necessary for the competitors of spot dubbing. Get ready to Kindle the fire of voice modulation to bring out the personalities of your choice onto the dias and let your voice stand out this Aagneya'20
+                                                        <br><br>
+                                                      <div class="button-right t-button" data-open="EDM4" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>SPOT CHOREO</h3> Prizes worth 10,000/-<br><br>Let your feet do the talking. Dance for laughters, screams, hopes, madness, dreams. You don't need wings to fly!! Just dance!
+                                                        Aagneya 20’ presents SPOT CHOREO! Bring your charisma to the dance floor, break your feet like Jackson, leave the floor and levitate, dance to let it all loose, to just, fly!
+                                                        <br><br>
+                                                      <div class="button-right t-button" data-open="EDM5" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>PERSCRIPTA</h3> Prizes worth 6,000/-<br><br>Drawing ordinary things doesn't challenge an artist. 
+                                                        Channel your artistic ability to portrait anything that goes beyond ordinary. 
+                                                        We give extraordinary scenes and you show your extraordinary skills. 
+                                                        AAGNEYA'20 presents to you, an occasion where you can exhibit your creativity as well as the artistic abilities.
+                                                        We will provide some random objects, arrange those things and copy them into your sheets.
+                                                        <br><br>
+                                                      <div class="button-right t-button" data-open="EDM7" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>CHAYAM</h3> Prizes worth 6,000/-<br><br>Think you are an artist champing at the bit in hot pursuit of an arena of a canvas to transform thy figments of chimeras into an enthralling reality? 
+                                                        Cooling your heels for the perfect rostrum to flaunt your artistic poweress? 
+                                                        Uncloak the penchant of myriad hues and invoke the crackerjack whiz within you at CHAYAM, brought to you at AAGNEYA'20 , organised by Government Engineering College, Barton Hill.<br><br>
+                                                      <div class="button-right t-button" data-open="EDM8" nite data-close="concerts">View Rules and Register</div>
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Unplugged</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM" nite>
+                                                            &#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> A minimum of 2 participants and a maximum of 4 participants for a team of which one vocalist and an acoustic instrument is mandatory.
+                                                            <br><br>>  Acoustic instruments like guitar, violin etc can be used. Only clean tones are allowed.Synthesized tones are not allowed.
+                                                            <br><br>> Acoustic Percussion instruments like cajon, tabla, darbuka etc can be used. Drums and rhythm pads are not allowed.
+                                                            <br><br>> A team is given 10 minutes for performance.
+                                                            <br><br>> No restriction for the number of teams that can participate from a college.
+                                                            <br><br>> Own composition is welcomed.
+                                                            <br><br>> Overall performance of the team is the main judging criteria.
+                                                            <br><br>> The decision made by the judge will be final and binding.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 13 March 2020
+                                                            <br>Venue : Putharikandam
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Husna : 9961850523
+                                                            <br> Neethu : 9074124197
+                                                            <br><br><a href="https://bit.ly/2PpKw91">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-Livewire Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">English Jam</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="Livewire"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> A team of two is required.
+                                                            <br><br>>  Topics will be given at random at the time.
+                                                            <br><br>> Event consists of 2 rounds.
+                                                            <br><br>> Each team will be made to participate individually and as a team depending on the round.
+                                                            <br><br>> The number of rounds would depend on the number of participants.
+                                                            <br><br>> TThe decision of the judges will be final and binding.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 13 March 2020
+                                                            <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Navaneeta Padmakumar : 9400275023
+                                                            <br> Ann Reji : 8281552709
+                                                            <br><br><a href="https://forms.gle/7ekpaAz2XiF8hqh5A">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-Fusion Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Aalap</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="Fusion"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <!-- <img class="mi-evt-img" src="images/depts/Concerts/Pap.jpg"> -->
+                                                        <p>> Songs of only INDIAN languages are allowed.
+                                                            <br><br>> There are two rounds for the event.
+                                                            The first round is a prelims round and the shortlisted participants from the prelims will be selected for the finals.
+                                                            <br><br>Round 1 : Participants can sing a song of their choice (should not exceed 3 minutes - without karaoke).
+                                                            <br><br>Round 2 : Consists of two rounds- Melody and Fast number (with karaoke).
+                                                            <br><br>> Each song should not exceed 5 minutes.
+                                                            <br><br>> The participants are required to bring karaoke in mp3 format.
+                                                            <br><br>> It is mandatory that the karaoke should be submitted one hour before the event in a CD or pendrive.
+                                                            <br><br>> The decision of the judges will be final and binding.
+                                                            <br><br>> All participants must carry their college ID cards with them.
+                                                            <br><br>> Spot Registrations are also possible.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 15 March 2020, 9AM
+                                                            <br>Venue : Putharikandam Maidanam, Second Stage
+                                                            <br><br>> For more details, Contact:
+                                                            <br> Devika Dinesh : 9633538479
+                                                            <br> Nandha Jayaprakash : 9495386166
+                                                            <br><br><a href="https://forms.gle/mFMgGEuEbsK1RRip9">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-Popular Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Battle of Bands</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM2"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                            <p>> No individual can be a member of more than one competing bands in any role whatsoever.
+                                                                <br><br>> The number of members in a band is limited to a maximum of 10 members.
+                                                                <br><br>> Stage time will be 15 minutes-plug in to plug out. Sound checks may be done immediately before each band's performance.
+                                                                <br><br>> No backing tracks, guide tracks, pre-recorded music or computed beats can be used.
+                                                                <br><br>> Participants are liable to compensate any damage to the stage or equipment.
+                                                                <br><br>> Microphones and a standard 5-piece Drum Kit will be provided on stage along with necessary plug points.
+                                                                <br><br>> The final ranking will be based on cumulative performance in 2 rounds of event.
+                                                                <br><br>> Teams can perform songs of any language and genre.
+                                                                <br><br>> Decision of the judges will be final and binding.
+                                                                <br><br>> You are responsible for your belongings.
+                                                                <br><br>Registration fee : ₹150 per head.
+                                                                <br>Date : 15 March 2020
+                                                                <br>Venue : Putharikandam Maidanam
+                                                                <br><br>>For more details, Contact:
+                                                                <br> Jan Sam Bobby : 6282866236
+                                                                <br> Joel J : 9746968523
+                                                                <br><br><a href="https://forms.gle/YctLmxUs6mLtV6V17">REGISTER HERE</a>
+                                                                <br><br>
+                                                            </p>
+                                                            <p></p>
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-Popular2 Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">English Debate</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM3"
+                                                            nite>&#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                            <p>> Team of 2 is required.
+                                                                <br><br>>  Number of rounds will depend on the number of teams.
+                                                                <br><br>> Obscene words and derogatory language is forbidden.
+                                                                <br><br>> The decision of the judges will be final and binding.
+                                                                <br><br>Registration fee : ₹100 per head.
+                                                                <br>Date : 14 March 2020, 10AM
+                                                                <br>Venue :Government Engineering College Barton Hill, Trivandrum
+                                                                <br><br>>For more details, Contact:
+                                                                <br> Keerthi: 8281347845
+                                                                <br> Gautham: 7356088317
+                                                                <br><br><a href="bit.ly/Engdeb">REGISTER HERE</a>
+                                                                <br><br>
+                                                            </p>
+                                                            <p></p>
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Spot Dubbing</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM4" nite>
+                                                            &#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> Contestants should bring the video to be dubbed.
+                                                            <br><br>>  Maximum time duration of video : 2 to 10 minute.
+                                                            <br><br>> Criteria for judgement : Command of voice, Impression skills, degree of sync.
+                                                            <br><br>> Vulgarity in act is not entertained and will be disqualified.
+                                                            <br><br>> Decision made by the judges will be final and binding.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 15 March 2020
+                                                            <br>Venue : Putharikandam Maithanam
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Hithin : 9447052499
+                                                            <br> Nikhil : 9497102152
+                                                            <br><br><a href="bit.ly/spotdubbingaagneya">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Spot Choreo</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM5" nite>
+                                                            &#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> Only solo participants with valid college ID are allowed.
+                                                            <br><br>>  Duration will be around 4-5 mins.
+                                                            <br><br>> Songs will be of any kind and you can express any style of dance.
+                                                            <br><br>> No need for any props or any other materials with you.
+                                                            <br><br>> Any offensive, tempting or obscene showcase will be disqualified.
+                                                            <br><br>> Judgement will be purely based on your performance and decision of the judges will be final.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 13 March 2020, 1PM
+                                                            <br>Venue : Putharikandam Maithanam
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Anandhu G K : 9809153206
+                                                            <br> Vaidehi : 6282709019
+                                                            <br><br><a href="https://forms.gle/G1L2nd9dadYtXzMt9">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Perscripta</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM7" nite>
+                                                            &#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> Participation will be individual.
+                                                            <br><br>> You will have ½hr to create your model with the objects provided and an additional 2hrs to sketch it.
+                                                            <br><br>> Participants should bring pencils and other necessary items of their choice.
+                                                            <br><br>> Sheets will be provided.
+                                                            <br><br>> Bonus points will be awarded on the basis of depth and feel of the portrait.
+                                                            <br><br>> Decision of the judges will be final.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 14 March 2020
+                                                            <br>Venue : Government Engineering College Barton Hill, Trivandrum.
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Athira : 9544552980
+                                                            <br> Ganga : 6238587524
+                                                            <br><br><a href="http://bit.ly/perscripta">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div data-simplebar class="mi-evt-right-content t-EDM Nite" style="display:none">
+                                                    <div class="sb-cont">
+                                                        <p></p>
+                                                        <h2 class="uppercase">Chayam</h2>
+                                                        <div class="button-right t-button" data-open="concerts" data-close="EDM8" nite>
+                                                            &#8249; Go Back</div>
+                                                        <p></p>
+                                                        <p class="mi-gen-right-para"></p>
+                                                        <h3>Guidelines</h3>
+                                                        <p>> Participants should bring all necessary items needed for the competition. Paper will be provided.
+                                                            <br><br>> Painting medium - Watercolor.
+                                                            <br><br>> The topic of the competition will be given by us. Participants will have to draw their interpretation within 2 hours.
+                                                            <br><br>> The decision of the judges will be final and binding.
+                                                            <br><br>Registration fee : ₹100 per head.
+                                                            <br>Date : 14 March 2020, 11AM
+                                                            <br>Venue : Govt Engg College, Barton Hill
+                                                            <br><br>>For more details, Contact:
+                                                            <br> Anjaly Krishna I : 9495689755
+                                                            <br> Devika H : 9745322353
+                                                            <br><br><a href="https://forms.gle/6nNdrR2LFNZXTiTBA">REGISTER HERE</a>
+                                                            <br><br>
+                                                        </p>
+                                                        <p></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            </div>
+            <script>MoodI.miInitEvents()</script>
+        </div>
+    </div>
+</body>
+</html>
