@@ -10,3 +10,4 @@
 
 - **[JavaScript Piano](https://madhav-somanath.github.io/JavaScript-Piano/)**
 
+- **[K-Means Clustering Visualizer](https://madhav-somanath.github.io/K-Means/)**
