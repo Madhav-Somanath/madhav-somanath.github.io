@@ -1,6 +1,6 @@
 # Contents:
 
-**Check out the GitHub pages sameples of my projects!**
+**Check out some of my projects deployed right here on GitHub pages!**
 
 - **[Aagneya '19](https://madhav-somanath.github.io/aagneya19/)**
 
